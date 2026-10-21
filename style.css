@@ -1,0 +1,225 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #6c3bb5;
+    --dark-purple: #39205f;
+    --light-purple: #f3edff;
+    --lavender: #e4d5ff;
+    --white: #ffffff;
+    --text: #33234d;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f5ff;
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #492477, #8052c9);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+header p {
+    color: #eee3ff;
+    margin: 0;
+}
+
+/* NAVIGATION */
+nav {
+    background: var(--dark-purple);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+}
+
+button {
+    background: var(--purple);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8c60d0;
+    transform: translateY(-2px);
+}
+
+/* MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+.page {
+    background: var(--white);
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #e8ddff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #5b2c8310;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: var(--purple);
+    margin-top: 0;
+    font-size: 27px;
+}
+
+h3 {
+    color: var(--purple);
+}
+
+/* VERSE OF THE DAY */
+.verse-card {
+    background: linear-gradient(135deg, #f0e6ff, #e3d1ff);
+    border-left: 5px solid var(--purple);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 15px;
+    line-height: 1.8;
+}
+
+#dailyVerse {
+    font-size: 20px;
+    font-style: italic;
+    color: var(--dark-purple);
+}
+
+/* SEARCH */
+#searchInput {
+    width: 100%;
+}
+
+input,
+select {
+    padding: 13px;
+    border: 1px solid #d8c5f7;
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--text);
+    background: white;
+    margin: 8px 0;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px #6c3bb522;
+}
+
+.selectors {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.selectors select {
+    flex: 1;
+    min-width: 150px;
+}
+
+/* BIBLE VERSES */
+.verse {
+    background: #faf7ff;
+    border: 1px solid #eee4ff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 14px;
+    line-height: 1.8;
+    transition: 0.3s;
+}
+
+.verse:hover {
+    border-color: #b99ae9;
+    box-shadow: 0 4px 12px #6c3bb510;
+}
+
+.verse strong {
+    color: var(--purple);
+}
+
+.verse p {
+    margin-top: 0;
+}
+
+/* FAVORITES */
+#favoriteList:empty {
+    display: none;
+}
+
+#favoriteList {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark-purple);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 29px;
+    }
+
+    main {
+        padding: 0 12px;
+        margin: 18px auto;
+    }
+
+    .page {
+        padding: 20px 15px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav button {
+        padding: 10px 13px;
+        font-size: 13px;
+    }
+
+    .selectors {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .selectors select {
+        width: 100%;
+    }
+}

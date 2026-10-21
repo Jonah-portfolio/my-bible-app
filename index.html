@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bible App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>✝ My Bible</h1>
+        <p>Read, search, and save God's Word</p>
+    </header>
+
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('read')">Read Bible</button>
+        <button onclick="showPage('favorites')">Favorites</button>
+    </nav>
+
+    <main>
+        <section id="home" class="page">
+            <h2>Welcome to My Bible</h2>
+            <p>Find inspiration and encouragement in God's Word.</p>
+
+            <div class="verse-card">
+                <h3>Verse of the Day</h3>
+                <p id="dailyVerse"></p>
+                <strong id="dailyReference"></strong>
+            </div>
+
+            <button onclick="showPage('read')">Start Reading</button>
+        </section>
+
+        <section id="read" class="page hidden">
+            <h2>Read the Bible</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search verses or references..."
+            >
+            <button onclick="searchVerses()">Search</button>
+
+            <div class="selectors">
+                <select id="bookSelect" onchange="displayVerses()">
+                    <option value="Genesis">Genesis</option>
+                    <option value="Psalms">Psalms</option>
+                    <option value="Proverbs">Proverbs</option>
+                    <option value="Matthew">Matthew</option>
+                    <option value="John">John</option>
+                    <option value="Philippians">Philippians</option>
+                </select>
+
+                <select id="chapterSelect" onchange="displayVerses()">
+                    <option value="1">Chapter 1</option>
+                    <option value="2">Chapter 2</option>
+                </select>
+            </div>
+
+            <div id="verseList"></div>
+            <div id="searchResults"></div>
+        </section>
+
+        <section id="favorites" class="page hidden">
+            <h2>My Favorite Verses</h2>
+            <div id="favoriteList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>My Bible App | Keep the faith ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
